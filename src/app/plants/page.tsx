@@ -1,7 +1,14 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { Plant } from '@/generated/prisma';
 
+type Plant = {
+    id: number,
+    name: string,
+    age: string,
+    description: string,
+    price: string,
+    postedBy: any
+}
 const Plants = () => {
   const [plants, setPlants] = useState<Plant[]>([]);
   const [loading, setLoading] = useState(true);
